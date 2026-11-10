@@ -1,5 +1,5 @@
 {
-  "name": "stub-plugin",
+  "name": "plugin-stub",
   "version": "1.0.0",
   "description": "The reference plugin for the forebay ecosystem: the smallest real plugin, kept green against every gate.",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
   "author": "intisy",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forebay/stub-plugin.git"
+    "url": "git+https://github.com/forebay/plugin-stub.git"
   },
   "keywords": [
     "forebay",

@@ -2,7 +2,7 @@ import type { Plugin, PluginContext } from "@intisy/bayonet";
 import type { ActionResult, SettingsCapability } from "@intisy-ai/basekit";
 import { STUB_SETTINGS } from "./settings.js";
 
-const PLUGIN_ID = "stub-plugin";
+const PLUGIN_ID = "plugin-stub";
 
 /**
  * This plugin's `settings` capability: the fields `./settings.js` declares, and one action that

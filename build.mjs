@@ -14,4 +14,4 @@ await build({
   logLevel: "info",
 });
 
-console.log("Bundled stub-plugin -> dist/index.js");
+console.log("Bundled plugin-stub -> dist/index.js");

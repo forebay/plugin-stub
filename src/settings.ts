@@ -1,7 +1,7 @@
 import type { CapabilitySchema } from "@intisy-ai/basekit";
 
 /** The plugin's own name, which is also its config file's basename and its deployed bundle's. */
-export const PLUGIN_NAME = "stub-plugin";
+export const PLUGIN_NAME = "plugin-stub";
 
 /**
  * Every setting this plugin has, and the value each starts at.

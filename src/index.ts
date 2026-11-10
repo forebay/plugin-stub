@@ -11,7 +11,7 @@ defineReadme({
     ENTRY -->|default export| PLUGIN[plugin.ts: api-only]
     PLUGIN -->|ctx.provide| SETTINGS[settings capability]
     ENTRY -->|node dist/index.js config| CLI[basekit config CLI]
-    CLI --> FILE["config/stub-plugin.json (written only on a change)"]`,
+    CLI --> FILE["config/plugin-stub.json (written only on a change)"]`,
   structure: {
     src: [
       "`plugin.ts`: the api plugin a host loads. Its only runtime import is the api.",
@@ -21,7 +21,7 @@ defineReadme({
     dist: ["`index.js`: the esbuild bundle `plugin.json` points a host at."],
   },
   commands: [
-    { name: "stub-plugin-config", description: "View and change stub-plugin configuration." },
+    { name: "plugin-stub-config", description: "View and change plugin-stub configuration." },
   ],
   dependencies: ["api", "basekit"],
 });

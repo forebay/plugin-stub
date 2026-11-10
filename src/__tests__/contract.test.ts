@@ -4,9 +4,9 @@
 import { runPluginContract } from "@intisy-ai/basekit/testing";
 
 runPluginContract({
-  name: "stub-plugin",
+  name: "plugin-stub",
   entry: "dist/index.js",
-  configName: "stub-plugin",
+  configName: "plugin-stub",
   app: "both",
   deploy: "load",
   readme: true,
