@@ -1,11 +1,12 @@
 node_modules/
 dist/
-.DS_Store
-.env
+siblings/
+native/
 .idea/
-package-lock.json
-.superpowers/
 docs/
+.superpowers/
+graphify-out/
 
 # Generated on the default branch by the release readme job.
 README.md
+site/

@@ -1,0 +1,5 @@
+kind: generic
+description: The smallest real weivel plugin, a GitHub template another plugin starts from
+badges:
+  - npm-version
+  - npm-downloads

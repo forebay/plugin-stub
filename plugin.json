@@ -1,30 +1,35 @@
 {
-  "$schema": "./node_modules/@intisy/bayonet/schema/plugin.schema.json",
-  "id": "plugin-stub",
   "api": 1,
-  "entry": "dist/index.js",
+  "importName": "plugin-stub",
+  "id": "plugin-stub",
+  "version": "2.0.0",
+  "entry": "dist/plugin.js",
+  "bundle": {
+    "entry": "src/plugin.ts"
+  },
   "displayName": "Stub Plugin",
-  "capabilities": [
-    "settings"
-  ],
+  "services": {
+    "provides": ["plugin-stub:actions"],
+    "consumes": ["weivel.config", "weivel.log"]
+  },
+  "actions": {
+    "greet": {
+      "label": "Say the greeting",
+      "call": {
+        "service": "plugin-stub:actions",
+        "method": "greet"
+      }
+    }
+  },
   "config": {
     "defaults": {
       "logging": true,
       "greeting": "hello"
     }
   },
-  "publish": {
-    "generatedReadme": true
-  },
   "repo": {
     "role": "Reference plugin and starting point",
     "category": "plugin",
-    "tech": [
-      "typescript"
-    ],
-    "topics": [
-      "example",
-      "template"
-    ]
+    "tech": ["typescript"]
   }
 }

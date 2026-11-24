@@ -1,8 +1,8 @@
 {
   "name": "plugin-stub",
-  "version": "1.0.0",
-  "description": "The reference plugin for the forebay ecosystem: the smallest real plugin, kept green against every gate.",
-  "main": "dist/index.js",
+  "version": "2.0.0",
+  "description": "The smallest real weivel plugin: one service, one action and two settings, kept as a template another plugin starts from.",
+  "main": "dist/plugin.js",
   "type": "module",
   "license": "MIT",
   "author": "intisy",
@@ -11,11 +11,12 @@
     "url": "git+https://github.com/forebay/plugin-stub.git"
   },
   "keywords": [
-    "forebay",
     "plugin",
+    "stub",
+    "weivel",
+    "forebay",
     "example",
-    "template",
-    "stub"
+    "template"
   ],
   "files": [
     "dist/",
@@ -24,21 +25,17 @@
     "LICENSE"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.18.0"
   },
   "scripts": {
-    "build": "tsc --noEmit && node build.mjs",
-    "test": "npm run build && vitest run",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node scripts/native.ts && npm run build && tsc --noEmit && vitest run",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@intisy/bayonet": "^1.8.0",
-    "@types/node": "^22.0.0",
-    "esbuild": "^0.25.12",
-    "typescript": "^5.4.0",
-    "vitest": "^3.2.6"
-  },
-  "dependencies": {
-    "@intisy-ai/basekit": "^5.0.0"
+    "@types/node": "22.10.2",
+    "@weivel/typescript": "file:./siblings/typescript",
+    "typescript": "5.7.2",
+    "vitest": "3.2.7"
   }
 }
