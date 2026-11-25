@@ -8,5 +8,13 @@ permissions:
 jobs:
   test:
     uses: intisy/workflows/.github/workflows/test.yml@main
-    secrets:
-      envPAT: ${{ secrets.PAT }}
+    with:
+      toolchains: node cmake
+      runners: '["ubuntu-latest","windows-latest","macos-latest"]'
+      cmake_version: '4.4.4'
+      cmake_configure: ''
+      cmake_build: ''
+      cmake_test: ''
+      node_install: npm ci --prefix siblings/typescript && npm ci
+      node_build: npm run build --prefix siblings/typescript && npm run build
+      node_test: npm test
