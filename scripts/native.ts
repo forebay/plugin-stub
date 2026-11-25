@@ -13,6 +13,7 @@ const SIBLINGS = join(REPOSITORY_ROOT, "siblings");
 const NATIVE = join(REPOSITORY_ROOT, "native");
 const LIBRARIES: readonly NativeLibrary[] = [
   { sibling: "library", target: "runtime", declaration: join("runtime", "library.json") },
+  { sibling: "library", target: "runtime_testing", declaration: join("runtime", "testing", "library.json") },
 ];
 
 function sharedLibraryFileName(target: string): string {

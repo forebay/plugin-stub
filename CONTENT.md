@@ -20,8 +20,9 @@ from `forebay/provider-stub` instead.
 
 ## Testing
 
-`npm test` builds `runtime` from `siblings/library` (`scripts/native.ts`), builds, type-checks and runs vitest.
-`test/stub.test.ts` bundles the plugin and starts the real `runtime` over a temporary home with
+`npm test` builds `runtime` and the test-only `runtime_testing` from `siblings/library` (`scripts/native.ts`),
+builds, type-checks and runs vitest. `test/stub.test.ts` bundles the plugin and starts the real `runtime` over a
+temporary home, laid out by `runtime_testing` through runtime's own writers, with
 `@weivel/typescript`'s host program: it calls the service, runs `greet` through the program's ACTION mode, reads the
 log the run wrote, and checks the real home's places were left as they were.
 
